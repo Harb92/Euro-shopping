@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firstdesign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="imgs/eurologo.png">
+            </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>About</li>
+                <li><a href="#"></a>Clothes</li>
+                <li><a href="#"></a>Accessories</li>
+            </ul>
+        </div>
+        </nav>
+
+    <div class="information">
+        <div class="overlay"></div>
+        <img src="imgs/eurologo.png" class="euroimg">
+            <div id="circle">
+                <div class="category one">
+                    <img src="imgs/t-shirt.png">
+                   <div>
+                       <h1>Men </h1>
+                    </div> 
+                </div>
+                <div class="category two">
+                    <img src="imgs/accessories.png">
+                    <div>
+                        <h1>Accessories</h1>
+                     </div> 
+                </div>
+                <div class="category three">
+                    <img src="imgs/womenclothe.png">
+                    <div>
+                        <h1>Women </h1>
+                     </div> 
+                </div>
+                <div class="category four">
+                    <img src="imgs/lingerie.png">
+                    <div>
+                        <h1>Lengerie</h1>
+                     </div> 
+                </div>
+            </div>    
+    
+    </div>
+        <div class="controls">
+            <img src="imgs/arrow.png" id="upBtn">
+                <h3>category</h3>
+            <img src="imgs/arrow.png" id="dwnBtn">
+</div>
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+
+            var dwnBtn = document.getElementById("dwnBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum
+            }
+
+            dwnBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum
+            }
+         </script>
+</body>
+</html>
+
+
